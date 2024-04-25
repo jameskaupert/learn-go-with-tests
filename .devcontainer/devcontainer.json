@@ -2,14 +2,13 @@
 // README at: https://github.com/devcontainers/templates/tree/main/src/go
 {
 	"name": "Go",
-	"build": {
-		"dockerfile": "Dockerfile"
-	},
+	"image": "jrkaupert/docker-dev-env:latest",
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "git config --global --add safe.directory /workspaces/learn-go-with-tests",
 	// Configure tool-specific properties.
 	"customizations": {
 		// Configure properties specific to VS Code.
